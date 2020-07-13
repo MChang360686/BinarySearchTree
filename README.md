@@ -186,3 +186,33 @@ public class BinarySearchTree {
         System.out.println(kthSmallest(treeTwo.root,2));
     }
 }
+
+//Additional test file to evaluate BinarySearchTree
+
+public class Test extends BinarySearchTree{
+    public static void main(String[] args){
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.search(tree.root,666);
+        tree.insert(5);
+        tree.insert(1);
+        tree.insert(76);
+        tree.insert(357);
+        tree.insert(4);
+        tree.insert(666);
+        tree.insert(10);
+        tree.insert(12);
+        tree.insert(44);
+        tree.inOrderRec(tree.root);
+        System.out.println();
+        tree.delete(tree.root,1);
+        tree.delete(tree.root,76);
+        tree.delete(tree.root,666);
+        tree.inOrderRec(tree.root);
+        System.out.println();
+        tree.search(tree.root, 5);
+        tree.search(tree.root, 44);
+        System.out.println(sum(tree.root));
+        System.out.println(kthSmallest(tree.root, 3));
+    }
+}
+
